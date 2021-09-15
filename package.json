@@ -5,10 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
+    "@meforma/vue-toaster": "^1.2.2",
+    "@vite/connector": "^0.0.2",
+    "@vite/vitejs": "^2.3.14",
+    "@vite/vitejs-ws": "^2.3.14",
     "core-js": "^3.6.5",
+    "qrcode-generator": "^1.4.4",
     "vue": "^3.0.0"
   },
   "devDependencies": {

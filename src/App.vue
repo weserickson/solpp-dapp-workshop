@@ -1,15 +1,25 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <hr width="25%">
+  <ToastNotify/>
+  <ViteConnectBox/>
+  <FundForm/><br>
+  <GuessForm/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ToastNotify from './components/ToastNotify.vue'
+import ViteConnectBox from './components/ViteConnectBox.vue'
+import FundForm from './components/FundForm.vue'
+import GuessForm from './components/GuessForm.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ToastNotify,
+    ViteConnectBox,
+    FundForm,
+    GuessForm,
   }
 }
 </script>
