@@ -12,6 +12,7 @@
     "@meforma/vue-toaster": "^1.2.2",
     "@vite/connector": "^0.0.2",
     "@vite/vitejs": "^2.3.14",
+    "@vite/vitejs-http": "^2.3.14",
     "@vite/vitejs-ws": "^2.3.14",
     "core-js": "^3.6.5",
     "qrcode-generator": "^1.4.4",

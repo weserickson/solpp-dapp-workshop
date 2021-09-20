@@ -1,18 +1,16 @@
 <template>
   <div class="hello">
-  ViteConnectBox: {{this.$store.state}} <br>
-  <QRBox v-if="!connected" :qrdata="uri" />
-  <span v-if="!connected">
+  ViteConnect: {{this.$store.state}} <br>
+  <QRBox v-if="waiting" :qrdata="uri" />
+  <span v-if="waiting">
   To submit a guess, scan the QR code using your Vite Wallet. <br>
   Download the Vite Wallet at <a href="https://app.vite.net/">app.vite.net</a>.
   </span>
-  <br>
   </div>
 </template>
 
 <script>
 import QRBox from './QRBox.vue';
-
 
 export default {
   name: 'ViteConnectBox',
@@ -20,12 +18,11 @@ export default {
   QRBox
   },
   computed: {
-    connected: function (){
-        if( this.$store.state == "connected" ){
-	return true;
-	} else {
-	return false;
-	}
+    waiting: function (){
+        if( this.$store.state == "waiting" ){
+          return true;
+        }
+        return false;
     },
     uri: function(){
       console.log(this.$store.uri)

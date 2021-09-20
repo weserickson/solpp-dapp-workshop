@@ -1,8 +1,11 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <hr width="25%">
+
   <ToastNotify/>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <div><b>Earn Vite by guessing a secret!</b></div>
+  <hr width="25%">
   <ViteConnectBox/>
+  <hr width="25%">
   <FundForm/><br>
   <GuessForm/>
 </template>

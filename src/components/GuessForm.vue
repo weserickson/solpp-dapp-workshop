@@ -1,6 +1,6 @@
 <template>
 
-<div>
+<div v-if="connected">
   <b>Guess Form</b><br>
   <label>Answer: </label>
   <input type="text" v-model="answer">&nbsp;
@@ -13,6 +13,15 @@
 export default {
   name: 'GuessForm',
   props: {
+  },
+  computed: {
+    connected: function (){
+        if( this.$store.state == "connected" ){
+          return true;
+        } else {
+          return false;
+        }
+    },
   },
   methods : {
     submit : function() {

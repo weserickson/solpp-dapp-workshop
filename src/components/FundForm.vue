@@ -1,6 +1,6 @@
 <template>
 
-<div v-if="owner">
+<div v-if="owner&&connected">
 <b>Funding Form</b><br>
   <label>Answer: </label>
   <input type="text" v-model="answer"><br>
@@ -17,11 +17,18 @@ export default {
   computed: {
     owner : function(){
       console.log(this.$store.address)
-      if(this.$store.address === 'vite_ad43000f81aee4468387854e20a8c53e2c9027b8655ad2de6c'){
+      if(this.$store.address === this.$store.contract_owner){
         return true;
       }
       return false;
-    }
+    },
+    connected: function (){
+      if( this.$store.state == "connected" ){
+        return true;
+      } else {
+        return false;
+      }
+    },
   },
   methods: {
   submit : function() {
